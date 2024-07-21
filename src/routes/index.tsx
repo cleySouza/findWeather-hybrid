@@ -1,10 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { Routes } from "./routes";
+import { RoutersTabs, Routes } from "./routes";
 
 export function Router() {
   return (
     <NavigationContainer>
       <Routes/>
+      {/* <RoutersTabs/> */}
     </NavigationContainer>
   )
 }

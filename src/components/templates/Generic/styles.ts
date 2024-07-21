@@ -20,6 +20,5 @@ export const DefaultStyles = StyleSheet.create({
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
-    // paddin: "100%"
   }
 })

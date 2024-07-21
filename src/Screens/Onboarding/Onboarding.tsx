@@ -2,7 +2,7 @@ import React from "react";
 import { Generic } from "../../components/templates";
 import { colors } from "../../theme/colors";
 
-export function OnboardingScreen() {
+export function OnboardingScreen({navigation}: any) {
   return(
     <Generic
       containerProps={{
@@ -31,7 +31,10 @@ export function OnboardingScreen() {
         viewProps: {flexDirection: "row", justifyContent: "center"}
       }}
       button={{
-        text: "Iniciar"
+        text: "Iniciar",
+        props: {
+          onPress: () => navigation.navigate("Home")
+        }
       }}
     />
   )

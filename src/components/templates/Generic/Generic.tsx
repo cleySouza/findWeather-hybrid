@@ -59,7 +59,13 @@ export function Generic({
 
       {button && (
         <View style={{paddingHorizontal: 20, width: "100%"}}>
-        <AtomButton buttonProps={button?.props} styles={{...DefaultStyles?.button, ...button?.style}}>
+        <AtomButton 
+          buttonProps={button?.props} 
+          styles={{
+            ...DefaultStyles?.button, 
+            ...button?.style
+            }}
+          >
           <AtomText text={button?.text} />
         </AtomButton>
         </View> 
