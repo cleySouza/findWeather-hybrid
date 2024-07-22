@@ -1,7 +1,7 @@
 import { TextInput, View } from "react-native";
 import { Container } from "../../components/molecules";
 import { AtomButton, AtomText } from "../../components/atoms";
-import { colors } from "../../theme/colors";
+import { theme } from "../../theme/colors";
 import Icon from "react-native-vector-icons/Octicons";
 import IconLocation from "react-native-vector-icons/MaterialIcons";
 
@@ -20,7 +20,7 @@ export function Search({navigation}: any) {
             width: 40,
             height: 40,
             borderWidth: 1,
-            borderColor: colors.gray_600,
+            borderColor: theme?.colors.gray_600,
             borderRadius: 20,
             alignItems: "center",
             justifyContent: "center"
@@ -32,7 +32,7 @@ export function Search({navigation}: any) {
           <Icon 
             name="chevron-left"
             size={25}
-            color={colors.white}
+            color={theme?.colors.white}
           />
         </AtomButton>
         <AtomText
@@ -56,18 +56,18 @@ export function Search({navigation}: any) {
         <View
           style={{
             flexDirection: "row",
-            backgroundColor: colors.dark_400,
+            backgroundColor: theme?.colors.dark_400,
             padding: 16,
             borderRadius: 10,
             width: "85%"
           }}
         >
-          <Icon name="search" size={19} color={colors.white}/>
+          <Icon name="search" size={19} color={theme?.colors.white}/>
           <TextInput
             placeholder="Digite o nome de uma cidade"
-            placeholderTextColor={colors.gray_200}
+            placeholderTextColor={theme?.colors.gray_200}
             style={{
-              color: colors.white,
+              color: theme?.colors.white,
               fontSize: 16,
               marginLeft: 20
             }}
@@ -77,7 +77,7 @@ export function Search({navigation}: any) {
           styles={{
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: colors.dark_400,
+            backgroundColor: theme?.colors.dark_400,
             padding: 10,
             borderRadius: 10
           }}
@@ -85,7 +85,7 @@ export function Search({navigation}: any) {
           <IconLocation 
             name="location-on"
             size={29}
-            color={colors.white}
+            color={theme?.colors.white}
           />
         </AtomButton>
       </View>

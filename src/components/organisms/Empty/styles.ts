@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../../theme/colors";
+import { theme } from "../../../theme/colors";
 
 export const HomeStyle = StyleSheet.create({
   container: {
-    backgroundColor: colors?.dark,
+    backgroundColor: theme?.colors?.dark,
     justifyContent: "space-around",
     alignItems: "center"
   },
@@ -15,11 +15,11 @@ export const HomeStyle = StyleSheet.create({
   },
   secondTitleMain: {
     fontSize: 33,
-    fontWeight: 700
+    fontFamily: theme.font.bold
   },
   textButton: {
     textDecorationLine: "underline",
-    color: colors.gray_100,
+    color: theme?.colors.gray_100,
     fontSize: 22
   }
 })

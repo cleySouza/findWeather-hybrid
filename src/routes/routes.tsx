@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, OnboardingScreen, Search } from "../Screens"
-import { colors } from "../theme/colors";
+import { theme } from "../theme/colors";
 import Icon from "react-native-vector-icons/Octicons"
 import { Text } from "react-native";
 
@@ -38,13 +38,13 @@ export function RoutersTabs() {
               name={iconName} 
               size={30} 
               color={
-                focused ? colors.white : colors.gray_100
+                focused ? theme?.colors.white : theme?.colors.gray_100
               }
             />
           );
         },
         tabBarLabelPosition: 'beside-icon',
-        tabBarActiveTintColor: colors.white,
+        tabBarActiveTintColor: theme?.colors.white,
         tabBarLabel: ({color, focused}) => {
           let label;
 
@@ -59,8 +59,9 @@ export function RoutersTabs() {
               style={{ 
                 color, 
                 marginLeft: 20,
-                fontWeight: focused ? 700 : 300,
-                fontSize: 16
+                fontFamily: focused ? theme.font.bold : theme.font.regular,
+                fontSize: 16,
+                marginTop: 5
               }}
             >
               {label}
@@ -68,9 +69,9 @@ export function RoutersTabs() {
           )
         },
         tabBarStyle: {
-          backgroundColor: colors.dark,
+          backgroundColor: theme?.colors.dark,
           borderTopWidth: 0,
-          paddingHorizontal: 80
+          paddingHorizontal: 80,
         }
       })}
     >

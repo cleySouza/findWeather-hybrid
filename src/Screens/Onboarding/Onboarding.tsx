@@ -1,6 +1,6 @@
 import React from "react";
 import { Generic } from "../../components/templates";
-import { colors } from "../../theme/colors";
+import { theme } from "../../theme/colors";
 
 export function OnboardingScreen({navigation}: any) {
   return(
@@ -12,12 +12,12 @@ export function OnboardingScreen({navigation}: any) {
       }}
       image={{source: require('../../assets/images/cloud-and-thunder.png'), }}
       textCenter={{
-        text: 'Descubra o Clima\na sua Cidade',
+        text: 'Descubra o Clima \n na sua Cidade',
         styles: {
-          color: colors?.white,
+          color: theme?.colors?.white,
           fontSize: 33,
           textAlign: "center",
-          fontWeight: "600"
+          fontFamily: theme.font.bold
         }
       }}
       longText={{
@@ -26,8 +26,12 @@ export function OnboardingScreen({navigation}: any) {
         text3: "Weather",
         text4: " nunca",
         text5: "ficou tão fácil ter a previsão do\ntempo na palma da sua mão",
-        styles2: {fontWeight: "600"},
-        styles3: {fontWeight: "700"},
+        styles2: {
+          fontFamily: theme.font.semiBold
+        },
+        styles3: {
+          fontFamily: theme?.font?.bold
+        },
         viewProps: {flexDirection: "row", justifyContent: "center"}
       }}
       button={{

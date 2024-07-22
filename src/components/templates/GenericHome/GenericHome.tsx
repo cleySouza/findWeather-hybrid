@@ -1,10 +1,13 @@
-import { Empty } from "../../organisms";
+import { Content, Empty } from "../../organisms";
 
 
 export function GenericHome({navigation}: any) {
   return(
-    <Empty
-      navigation={navigation}
+    // <Empty
+    //   navigation={navigation}
+    // />
+    <Content
+      
     />
   )
 }
