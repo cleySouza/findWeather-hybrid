@@ -18,7 +18,7 @@ export function Search({navigation}: any) {
   }
 
   const dataList = data === undefined ? [] : [data];
-  console.log(dataList);
+
   return (
     <Container>
       <View

@@ -1,9 +1,5 @@
-import { GenericHome } from "../../components/templates";
+import {GenericHome} from '../../components/templates';
 
 export function Home({navigation}: any) {
-  return (
-    <GenericHome
-      navigation={navigation}
-    />
-  )
+  return <GenericHome navigation={navigation} />;
 }

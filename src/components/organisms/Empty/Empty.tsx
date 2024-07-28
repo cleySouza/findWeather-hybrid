@@ -1,24 +1,14 @@
-import { View } from "react-native";
-import { Container } from "../../molecules";
-import { HomeStyle } from "./styles";
-import { AtomButton, AtomImage, AtomText } from "../../atoms";
+import {View} from 'react-native';
+import {Container} from '../../molecules';
+import {HomeStyle} from './styles';
+import {AtomButton, AtomImage, AtomText} from '../../atoms';
 
 export function Empty({navigation}: any) {
   return (
-    <Container
-      style={HomeStyle.container}
-    >
-      <View
-        style={HomeStyle.contentTitleMain}
-      >
-        <AtomText
-          text="Find"
-          styles={HomeStyle.firstTitleMain}
-        />
-        <AtomText
-          text="Weather"
-          styles={HomeStyle.secondTitleMain}
-        />
+    <Container style={HomeStyle.container}>
+      <View style={HomeStyle.contentTitleMain}>
+        <AtomText text="Find" styles={HomeStyle.firstTitleMain} />
+        <AtomText text="Weather" styles={HomeStyle.secondTitleMain} />
       </View>
       <AtomImage
         prop={{
@@ -28,12 +18,11 @@ export function Empty({navigation}: any) {
 
       <AtomButton
         buttonProps={{
-          onPress: () => navigation.navigate('Search')
+          onPress: () => navigation.navigate('Search'),
         }}
         styles={{
-          alignItems: "center"
-        }}       
-      >
+          alignItems: 'center',
+        }}>
         <AtomText
           text="Selecione aqui um local e"
           styles={HomeStyle.textButton}
@@ -44,5 +33,5 @@ export function Empty({navigation}: any) {
         />
       </AtomButton>
     </Container>
-  )
+  );
 }
